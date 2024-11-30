@@ -11,3 +11,5 @@ import Collapsible from "react-native-collapsible";
 const MyInfo = () => {
   return <Text>Hello</Text>;
 };
+
+export default MyInfo;

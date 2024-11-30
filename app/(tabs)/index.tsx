@@ -21,25 +21,39 @@ const stages: Stage[] = [
     id: 1,
     title: "Initial Application",
     status: "Complete",
-    details: ["Step 1", "Step 2"],
+    details: [
+      "Application Received",
+      "Application Under Review",
+      "Application Reviewed",
+    ],
   },
   {
     id: 2,
     title: "Testing",
     status: "In Progress",
-    details: ["Step 1", "Step 2"],
+    details: [
+      "Force Test is 2024-09-22 at 2:30 PM",
+      "Bring gym clothes and water bottle",
+      "Force Test Consists of:",
+      "30x Sandbag lift within - 3 mins, 30 secs",
+      "Loaded and Unloaded Shuttle Run - 5 mins, 21 secs",
+      "200lbs drag - No Time Limit",
+    ],
   },
   {
     id: 3,
     title: "Interview",
     status: "Upcoming",
-    details: ["Step 1", "Step 2"],
+    details: ["Your interview has not been scheduled, please wait"],
   },
   {
     id: 4,
     title: "Medical Exam",
     status: "Upcoming",
-    details: ["Step 1", "Step 2"],
+    details: [
+      "Your medical has not been scheduled, please wait",
+      "You will be tested on vision, colour vision and a hearing test.",
+    ],
   },
 ];
 
