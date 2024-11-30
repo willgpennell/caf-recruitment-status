@@ -30,6 +30,13 @@ const ApplicationProgress = () => {
   return (
     <View>
       <Text>Canadian Forces Application</Text>
+      <FlatList
+        data={stages}
+        keyExtractor={(item) => item.id.toString()}
+        renderItem={({ item }) => {
+          return <Text>{item.title}</Text>;
+        }}
+      />
     </View>
   );
 };
