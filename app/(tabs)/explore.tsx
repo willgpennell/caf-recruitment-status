@@ -16,7 +16,32 @@ type Stage = {
 };
 
 // Dummy data
-const stages: Stage[] = [];
+const stages: Stage[] = [
+  {
+    id: 1,
+    title: "Initial Application",
+    status: "Complete",
+    details: ["Step 1", "Step 2"],
+  },
+  {
+    id: 2,
+    title: "Testing",
+    status: "In Progress",
+    details: ["Step 1", "Step 2"],
+  },
+  {
+    id: 3,
+    title: "Interview",
+    status: "Upcoming",
+    details: ["Step 1", "Step 2"],
+  },
+  {
+    id: 4,
+    title: "Medical Exam",
+    status: "Upcoming",
+    details: ["Step 1", "Step 2"],
+  },
+];
 
 const ApplicationProgress = () => {
   // Active ID can either be number or null
@@ -34,9 +59,15 @@ const ApplicationProgress = () => {
         data={stages}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => {
-          return <Text>{item.title}</Text>;
+          return (
+            <View>
+              <Text>{item.title}</Text>
+            </View>
+          );
         }}
       />
     </View>
   );
 };
+
+export default ApplicationProgress;
