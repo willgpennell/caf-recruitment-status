@@ -55,6 +55,18 @@ const stages: Stage[] = [
       "You will be tested on vision, colour vision and a hearing test.",
     ],
   },
+  {
+    id: 5,
+    title: "Interview",
+    status: "Upcoming",
+    details: ["Your final interview has not been scheduled, please wait"],
+  },
+  {
+    id: 6,
+    title: "Swear-In",
+    status: "Upcoming",
+    details: ["You're swear in has not been scheduled, please wait"],
+  },
 ];
 
 const ApplicationProgress = () => {
@@ -68,7 +80,7 @@ const ApplicationProgress = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Canadian Forces Application</Text>
+      <Text style={styles.title}>Canadian Forces Application 🍁</Text>
       <FlatList
         data={stages}
         keyExtractor={(item) => item.id.toString()}
@@ -124,7 +136,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
-    marginTop: 20,
+    marginTop: 40,
     fontWeight: "bold",
     marginBottom: 20,
   },
@@ -185,6 +197,7 @@ const styles = StyleSheet.create({
   listText: {
     fontSize: 14,
     color: "#616161",
+    paddingRight: 30,
   },
 });
 
