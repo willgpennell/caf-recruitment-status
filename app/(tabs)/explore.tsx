@@ -27,5 +27,9 @@ const ApplicationProgress = () => {
     setActiveId(activeId === id ? null : id);
   };
 
-  return <View></View>;
+  return (
+    <View>
+      <Text>Canadian Forces Application</Text>
+    </View>
+  );
 };
