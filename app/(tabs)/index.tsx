@@ -81,15 +81,15 @@ const ApplicationProgress = () => {
                 style={cardStyle}
                 onPress={() => toggleDetails(item.id)}
               >
-                <Text>{item.title}</Text>
-                <Text>{item.status}</Text>
+                <Text style={styles.cardTitle}>{item.title}</Text>
+                <Text style={styles.cardStatus}>{item.status}</Text>
               </TouchableOpacity>
               <Collapsible collapsed={activeId !== item.id}>
-                <View>
+                <View style={detailsStyle}>
                   {item.details.map((detail, index) => (
-                    <View key={index}>
-                      <Text>•</Text>
-                      <Text>{detail}</Text>
+                    <View key={index} style={styles.listItem}>
+                      <Text style={styles.bullet}>•</Text>
+                      <Text style={styles.listText}>{detail}</Text>
                     </View>
                   ))}
                 </View>
@@ -129,16 +129,16 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFECB3", // Light yellow for "In Progress"
   },
   pending: {
-    backgroundColor: "#F0F0F0", // Light red for "Pending"
+    backgroundColor: "#F0F0F0", // grey
   },
   detailsComplete: {
-    backgroundColor: "#dfebdf", // Light green for "Complete"
+    backgroundColor: "#dfebdf", // Lighter green for "Complete"
   },
   detailsInProgress: {
-    backgroundColor: "#f7f1dc", // Light yellow for "In Progress"
+    backgroundColor: "#f7f1dc", // Lighter yellow for "In Progress"
   },
   detailsPending: {
-    backgroundColor: "#F0F0F0", // Light red for "Pending"
+    backgroundColor: "#F0F0F0", // grey
   },
   cardTitle: {
     fontSize: 16,
