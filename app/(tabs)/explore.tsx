@@ -8,4 +8,28 @@ import {
 } from "react-native";
 import Collapsible from "react-native-collapsible";
 
-const stages = [];
+type Stage = {
+  id: number;
+  title: string;
+  status: "Complete" | "In Progress" | "Upcoming";
+  details: string[];
+};
+
+// Dummy data
+const stages: Stage[] = [];
+
+const ApplicationProgress = () => {
+  // Active ID can either be number or null
+  const [activeId, setActiveId] = useState<number | null>(null);
+
+  // Set open details pane
+  const toggleDetails = (id: number) => {
+    setActiveId(activeId === id ? null : id);
+  };
+
+  return (
+    <View>
+      <Text>Canadian Forces Application 🍁</Text>
+    </View>
+  );
+};
